@@ -1,0 +1,44 @@
+* {
+    color: white;
+}
+.launch {
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    margin: auto;
+}
+.launch-header {
+    text-align: center;
+}
+
+.launch-patch {
+    margin: auto;
+}
+.launch-patch img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.false {
+    color: rgb(241, 68, 68);
+    margin: auto;
+}
+
+.true {
+    color: rgb(17, 170, 17);
+    margin: auto;
+}
+
+.launch-details {
+    font-size: .8rem;
+    letter-spacing: .5px;
+    padding-left: 2rem;
+}
+
+.launch-options {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
