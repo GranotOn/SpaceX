@@ -51,13 +51,15 @@ export default function Display({ launches, loadMore, hasMore, loading }) {
     currentLaunch.success = launch.launch_success;
     currentLaunch.details = launch.details;
     currentLaunch.patch =
-      launch.links.mission_patch || launch.links.flickr_images[0];
+      launch.links.mission_patch ||
+      launch.links.flickr_images[0] ||
+      "https://images.pexels.com/users/avatars/3362/spacex-361.png?w=256&h=256&fit=crop&auto=compress";
     currentLaunch.wikipedia = launch.links.wikipedia;
     currentLaunch.launch_date = launch.launch_date_utc;
     currentLaunch.youtube = `https://www.youtube.com/embed/${launch.links.youtube_id}`;
     setFormatted((oldFormatted) => [...oldFormatted, currentLaunch]);
   };
-  
+
   return (
     <div className="display">
       {!loading &&
@@ -66,7 +68,7 @@ export default function Display({ launches, loadMore, hasMore, loading }) {
           <LaunchPreview launch={launch} key={launch.id} />
         ))}
       {isFetching && hasMore() && (
-        <div className="loader">
+        <div className="loader-secondary">
           <RingLoader color={"dodgerblue"} size={30} />{" "}
         </div>
       )}

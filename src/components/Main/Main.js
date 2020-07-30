@@ -46,6 +46,7 @@ export default function Main({
       //On click node
       node.addEventListener("click", () => {
         setSearchValue(flight.name);
+        window.location.replace(`/${node.getAttribute("id")}`)
         console.log(`${flight.name} id: ${node.getAttribute("id")}`);
       });
     });

@@ -9,7 +9,11 @@ const api = (url, callback) => {
     .then((response) => {
       return response.data;
     })
-    .catch((error) => {})
+    .catch((error) => {
+      if (callback && error) {
+        callback(error);
+      }
+    })
     .finally(() => {
       if (callback) {
         callback();
