@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import api from "../../SpaceX";
+import api from "../../Api/SpaceX";
 import Main from "../Main/Main";
 import Display from "../Display/Display";
 import "./Home.css";
 
-//TODO Specific launch page
 //TODO Email subscription for upcoming launches
 //TODO Twitter API for latest tweet?
 
@@ -19,7 +18,6 @@ export default function Home() {
   const [allFlights, setAllFlights] = useState([]); //Name of all flights (search).
   let spaceXApi = `https://api.spacexdata.com/v3/launches${extras}`;
 
-
   const handleLoading = () => {
     const loader = document.getElementById("loader");
     const container = document.getElementById("container");
@@ -27,7 +25,7 @@ export default function Home() {
     loader.classList.add("hidden");
     loader.classList.remove("loader");
     container.classList.remove("hidden");
-  }
+  };
   /**
    * Setting total flights for search input box.
    * Should get called only on first useEffect() when page loads.
@@ -40,6 +38,7 @@ export default function Home() {
         name: data[entry].mission_name,
         id: entry.toString(),
       };
+      // eslint-disable-next-line
       setAllFlights((prevFlights) => {
         return [...prevFlights, flight];
       });
@@ -119,6 +118,7 @@ export default function Home() {
       setExtras(`?limit=${limit}&offset=${offset}`);
     });
     setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /**
@@ -146,6 +146,7 @@ export default function Home() {
       setLoading(false);
       handleLoading();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [extras]);
 
   return (

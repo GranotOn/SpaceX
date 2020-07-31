@@ -1,0 +1,11 @@
+{
+    "name": "spaceX-visualizor",
+    "creator": "Owen Granot",
+    "icons": [
+        {
+            "src": "favicon.icon.png",
+            "sizes": "16x16",
+            "type": "image/x-icon"
+        }
+    ]
+}

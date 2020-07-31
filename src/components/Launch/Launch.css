@@ -1,0 +1,79 @@
+.dull {
+  color: grey;
+}
+
+.launch-container {
+  display: flex;
+  justify-content: center;
+}
+
+.launch-container .launch-header .launch-patch {
+  max-width: 250px;
+}
+
+.launch-breadcrumbs {
+  position: relative;
+  margin: auto;
+  width: 80%;
+}
+
+.vivid {
+  color: dodgerblue;
+}
+
+.launch-image {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+.glide--container {
+  margin: auto;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.glide--dots {
+  display: none;
+}
+
+.launch-body {
+  height: auto;
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.launch-data {
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+#status {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.mid {
+  margin: auto;
+  font-size: 3rem;
+}
+
+.details {
+  font-style: oblique;
+  width: 50%;
+}
+
+
+.align-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+h3 {
+  color: aliceblue;
+}
