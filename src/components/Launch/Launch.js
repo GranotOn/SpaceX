@@ -12,8 +12,8 @@ import "./Launch.css";
 
 import api from "../../Api/SpaceX";
 
-//TODO: Launch details
-//TODO: Carousell (https://www.glidejs.com)
+//TODO "D"
+//TODO Add email subscription if status is tbd 
 export default function Launch({ match, location }) {
   const launchId = match.params.id; //Launch ID from params
   const [error, setError] = useState(""); //API error handler

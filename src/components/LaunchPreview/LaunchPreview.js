@@ -17,6 +17,7 @@ export default function LaunchPreview(launch) {
   useEffect(() => {
     //Check if launch already happend (for timer)
     setDifference(-moment().diff(l.launch_date, "miliseconds"));
+    console.log(l);
   }, [l.launch_date]);
 
   /**
@@ -45,9 +46,13 @@ export default function LaunchPreview(launch) {
         </h1>
       </div>
       {difference < 0 ? (
-        <div className={"mb-1" + !l.success ? "false" : "true"}>
-          {!l.success ? "Failed" : "Success"}
-        </div>
+        <>
+          {l.success ? (
+            <div className="true mb-2">Success</div>
+          ) : (
+            <div className="false mb-2">Failed</div>
+          )}
+        </>
       ) : (
         <div className="status">
           <Countdown date={Date.now() + difference} />{" "}
