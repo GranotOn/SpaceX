@@ -61,6 +61,7 @@
   max-width: 40vh;
   margin-top: 1rem;
   display: block;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   -webkit-transition: all 1s ease-in-out;

@@ -17,7 +17,7 @@ export default function LaunchPreview(launch) {
   useEffect(() => {
     //Check if launch already happend (for timer)
     setDifference(-moment().diff(l.launch_date, "miliseconds"));
-    console.log(l);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [l.launch_date]);
 
   /**

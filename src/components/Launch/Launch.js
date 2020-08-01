@@ -13,7 +13,7 @@ import "./Launch.css";
 import api from "../../Api/SpaceX";
 
 //TODO "D"
-//TODO Add email subscription if status is tbd 
+//TODO Add email subscription if status is tbd
 export default function Launch({ match, location }) {
   const launchId = match.params.id; //Launch ID from params
   const [error, setError] = useState(""); //API error handler
@@ -78,8 +78,8 @@ export default function Launch({ match, location }) {
         <iframe
           title={data.mission_name}
           src={`https://www.youtube.com/embed/${data.links.youtube_id}`}
-          width="420"
-          height="315"
+          width="500"
+          height="350"
           id="launch-youtube"
         ></iframe>
       );
@@ -104,6 +104,10 @@ export default function Launch({ match, location }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /**
+   * Faded component (launch-data)
+   * Might export to different file
+   */
   const FadeComponent = (props) => {
     return (
       <div className="launch-data">
@@ -119,7 +123,7 @@ export default function Launch({ match, location }) {
         <Fade right>
           <>
             {youtube ? (
-              <div className="align-right mb-2" id="launch-youtube-parent">
+              <div className="align-right mb-2 mt-1" id="launch-youtube-parent">
                 {youtube}
               </div>
             ) : null}
@@ -176,7 +180,7 @@ export default function Launch({ match, location }) {
             >
               {images.map((image) => (
                 <div key={image}>
-                  <img src={image} className="launch-image" alt="flicker" />
+                  <img src={image} className="launch-image mt-2" alt="flicker" />
                 </div>
               ))}
             </Glide>

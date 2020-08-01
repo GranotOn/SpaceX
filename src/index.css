@@ -56,6 +56,10 @@ iframe {
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 2rem;
+}
+
 .hidden {
   display: none;
 }

@@ -6,7 +6,7 @@ import "./Home.css";
 
 //TODO Email subscription for upcoming launches (ip limiting)
 //TODO Twitter API for latest tweet?
-//TODO transition (maybe just a simple loader on Launch.js)
+//TODO transition (maybe just a simple loader on )
 export default function Home() {
   const limit = 5; //Limit launches for apis
   const [launches, setLaunches] = useState([]); //Each object in array will display.

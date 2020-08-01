@@ -29,7 +29,6 @@
 .glide--container {
   margin: auto;
   max-width: 500px;
-  margin-top: 1rem;
 }
 
 .glide--dots {
@@ -65,7 +64,7 @@
 
 .details {
   font-style: oblique;
-  width: 50%;
+  width: 65%;
 }
 
 

@@ -120,3 +120,10 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
 }
+
+
+@media only screen and (max-width: 724px) {
+  .launch-buttons {
+    visibility: hidden;
+  }
+}
